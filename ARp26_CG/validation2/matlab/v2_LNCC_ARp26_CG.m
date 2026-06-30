@@ -51,7 +51,7 @@ Lsig=length(sig);
 % Represents oscillations in sig via p-order AR(p) model 
 p=floor(Lsig/2)-1; % model order (p is chosen arbitrarily and should be
 % larger than 52 (season period))
-a=armcov(sig,p);  % AR model estimation via the modified 
+a=arburg(sig,p);  % AR model estimation via the modified 
 % covariance method
 a=a(:); % makes it a column vector
 
